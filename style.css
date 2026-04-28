@@ -94,3 +94,116 @@ footer {
         font-size: 32px;
     }
 }
+.section-desc {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.game-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.game-card {
+    background: white;
+    padding: 22px;
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.game-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+}
+
+.snake-info,
+.mine-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 0;
+    gap: 12px;
+}
+
+.snake-info button,
+.mine-info button {
+    border: none;
+    background: #2563eb;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.snake-info button:hover,
+.mine-info button:hover {
+    background: #1d4ed8;
+}
+
+#snakeCanvas {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    background: #111827;
+    border-radius: 10px;
+}
+
+.mine-board {
+    display: grid;
+    grid-template-columns: repeat(9, 34px);
+    grid-template-rows: repeat(9, 34px);
+    gap: 4px;
+    justify-content: center;
+    margin-top: 18px;
+}
+
+.mine-cell {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 6px;
+    background: #dbeafe;
+    color: #1f2937;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.mine-cell:hover {
+    background: #bfdbfe;
+}
+
+.mine-cell.open {
+    background: #f3f4f6;
+    cursor: default;
+}
+
+.mine-cell.flag {
+    background: #fde68a;
+}
+
+.mine-cell.mine {
+    background: #fecaca;
+}
+
+@media (max-width: 760px) {
+    .game-list {
+        grid-template-columns: 1fr;
+    }
+
+    .mine-board {
+        grid-template-columns: repeat(9, 30px);
+        grid-template-rows: repeat(9, 30px);
+        gap: 3px;
+    }
+
+    .mine-cell {
+        width: 30px;
+        height: 30px;
+        font-size: 13px;
+    }
+}
