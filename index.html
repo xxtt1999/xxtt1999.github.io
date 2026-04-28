@@ -13,6 +13,7 @@
         <p>机器人开发 / C++ / Python / 嵌入式 / AI 推理</p>
         <div class="buttons">
             <a href="#projects">我的项目</a>
+            <a href="#games">小游戏</a>
             <a href="#contact">联系我</a>
         </div>
     </header>
@@ -38,6 +39,37 @@
             <div class="card">
                 <h3>个人博客</h3>
                 <p>记录 C++、Linux、机器人开发和部署经验。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="games">
+        <h2>小游戏</h2>
+        <p class="section-desc">这里放一些用 HTML、CSS、JavaScript 写的小练习。</p>
+
+        <div class="game-list">
+            <div class="game-card">
+                <h3>贪吃蛇</h3>
+                <p>方向键或 WASD 控制移动，吃到食物加分。</p>
+
+                <div class="snake-info">
+                    <span>分数：<strong id="snakeScore">0</strong></span>
+                    <button id="snakeStartBtn">开始 / 重新开始</button>
+                </div>
+
+                <canvas id="snakeCanvas" width="320" height="320"></canvas>
+            </div>
+
+            <div class="game-card">
+                <h3>扫雷</h3>
+                <p>左键打开格子，右键插旗。9 × 9，共 10 个雷。</p>
+
+                <div class="mine-info">
+                    <span id="mineStatus">点击“开始新局”</span>
+                    <button id="mineRestartBtn">开始新局</button>
+                </div>
+
+                <div id="mineBoard" class="mine-board"></div>
             </div>
         </div>
     </section>
